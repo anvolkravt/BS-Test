@@ -1,2 +1,1 @@
-# anvolkravt-ya.ru
-BS Test
+[View](https://anvolkravt.github.io/BS-Test)
