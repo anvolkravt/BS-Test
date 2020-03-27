@@ -1,1 +1,134 @@
 @import '../../node_modules/normalize.css/normalize';
+@import 'colors';
+@import 'fonts';
+@import 'breakpoints';
+@import 'vars';
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Helvetica Neue';
+  min-height: 100vh;
+  color: $text;
+}
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.assortment {
+  padding-top: 35px;
+  padding-left: 130px;
+  padding-right: 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    line-height: 1.2;
+    font-family: 'Exo 2';
+    font-size: 36px;
+    margin-top: 0;
+  }
+
+  &__brands-list {
+    list-style: none;
+    display: flex;
+    width: 600px;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-family: 'Helvetica Neue';
+  }
+
+  &__brands-item-button {
+    width: 140px;
+    height: 50px;
+    border: none;
+    background: $brands-list-item-bg;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    &.active-tab {
+      background: $bonfesto-logo-bg;
+    }
+  }
+
+  & .all-brands {
+    width: 150px;
+    line-height: 1.2;
+    color: $text-brands-tab;
+
+    & span {
+      border-bottom: dotted 1px $text-brands-tab;
+    }
+  }
+
+  &__products-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.product {
+  width: calc((100% / 3) - (2 * #{$product-item-margin} / 3));
+  margin-right: $product-item-margin;
+  margin-bottom: 25px;
+
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  &__category {
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+
+  &__name {
+    width: fit-content;
+    margin-top: 0;
+    font-family: 'Exo 2';
+  }
+
+  &__title {
+    color: $text-product-title;
+    width: fit-content;
+    text-decoration-style: dotted;
+    font-size: 24px;
+    line-height: 1.4;
+
+    &-flavour {
+      display: block;
+      font-size: 20px;
+    }
+
+    &:hover {
+      color: $text-product-title-hover;
+    }
+  }
+
+  &__brand-logo {
+    background: $bonfesto-logo-bg;
+    width: 70px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & > img {
+      width: 70%;
+    }
+  }
+
+  &__description {
+    font-size: 15px;
+    line-height: 1.2;
+  }
+}

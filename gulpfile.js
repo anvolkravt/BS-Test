@@ -3,7 +3,7 @@
 const gulp = require('gulp'),
   sass = require('gulp-sass'),
   sourcemaps = require('gulp-sourcemaps'),
-  jade = require('gulp-jade'),
+  pug = require('gulp-pug'),
   autoprefixer = require('gulp-autoprefixer');
 
 sass.compiler = require('node-sass');
@@ -18,15 +18,20 @@ gulp.task('sass', function() {
     .pipe(gulp.dest('./css'));
 });
 
-gulp.task('jade', function() {
+gulp.task('pug', function() {
   return gulp
-    .src('./src/jade/*.jade')
-    .pipe(jade())
+    .src('./src/pug/*.pug')
+    .pipe(
+      pug({
+        pretty: true
+      })
+    )
     .pipe(gulp.dest('./'));
 });
 
 gulp.task('watch', function() {
   gulp.watch('./src/scss/*.scss', gulp.series('sass'));
+  gulp.watch('./src/pug/*.pug', gulp.series('pug'));
 });
 
-gulp.task('default', gulp.parallel('sass', 'jade', 'watch'));
+gulp.task('default', gulp.parallel('sass', 'pug', 'watch'));

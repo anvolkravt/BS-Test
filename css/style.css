@@ -303,4 +303,109 @@ template {
 [hidden] {
   display: none; }
 
+@font-face {
+  font-family: 'Exo 2';
+  src: url("../assets/fonts/Exo2-Medium.woff") format("woff"), url("../assets/fonts/Exo2-Medium.woff2") format("woff2");
+  font-weight: normal; }
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url("../assets/fonts/HelveticaNeueCyr-Light.woff") format("woff"), url("../assets/fonts/HelveticaNeueCyr-Light.woff2") format("woff2");
+  font-weight: normal; }
+
+ul {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: 'Helvetica Neue';
+  min-height: 100vh;
+  color: #1d1813; }
+
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto; }
+
+.assortment {
+  padding-top: 35px;
+  padding-left: 130px;
+  padding-right: 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .assortment__title {
+    line-height: 1.2;
+    font-family: 'Exo 2';
+    font-size: 36px;
+    margin-top: 0; }
+  .assortment__brands-list {
+    list-style: none;
+    display: flex;
+    width: 600px;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-family: 'Helvetica Neue'; }
+  .assortment__brands-item-button {
+    width: 140px;
+    height: 50px;
+    border: none;
+    background: #f5f3e8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer; }
+    .assortment__brands-item-button.active-tab {
+      background: #8fb52c; }
+  .assortment .all-brands {
+    width: 150px;
+    line-height: 1.2;
+    color: #77716a; }
+    .assortment .all-brands span {
+      border-bottom: dotted 1px #77716a; }
+  .assortment__products-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap; }
+
+.product {
+  width: calc((100% / 3) - (2 * 20px / 3));
+  margin-right: 20px;
+  margin-bottom: 25px; }
+  .product:nth-child(3n) {
+    margin-right: 0; }
+  .product__category {
+    font-size: 15px;
+    margin-bottom: 5px; }
+  .product__name {
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-top: 0;
+    font-family: 'Exo 2'; }
+  .product__title {
+    color: #3c2f20;
+    width: -moz-fit-content;
+    width: fit-content;
+    text-decoration-style: dotted;
+    font-size: 24px;
+    line-height: 1.4; }
+    .product__title-flavour {
+      display: block;
+      font-size: 20px; }
+    .product__title:hover {
+      color: #5b84f0; }
+  .product__brand-logo {
+    background: #8fb52c;
+    width: 70px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .product__brand-logo > img {
+      width: 70%; }
+  .product__description {
+    font-size: 15px;
+    line-height: 1.2; }
+
 /*# sourceMappingURL=style.css.map */
