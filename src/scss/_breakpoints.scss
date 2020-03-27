@@ -1,0 +1,10 @@
+$large-max: 1199px;
+$large-min: 992px;
+
+$medium-max: $large-min - 1;
+$medium-min: 768px;
+
+$small-max: $medium-min - 1;
+$small-min: 576px;
+
+$extra-small-max: $small-min - 1;

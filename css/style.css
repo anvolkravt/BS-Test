@@ -334,11 +334,18 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center; }
+  @media (max-width: 1199px) {
+    .assortment {
+      padding-left: 10%;
+      padding-right: 10%; } }
   .assortment__title {
     line-height: 1.2;
     font-family: 'Exo 2';
     font-size: 36px;
     margin-top: 0; }
+    @media (max-width: 575px) {
+      .assortment__title {
+        text-align: center; } }
   .assortment__brands-list {
     list-style: none;
     display: flex;
@@ -347,6 +354,16 @@ body {
     margin-bottom: 20px;
     font-size: 18px;
     font-family: 'Helvetica Neue'; }
+    @media (max-width: 767px) {
+      .assortment__brands-list {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 75%; } }
+    @media (max-width: 575px) {
+      .assortment__brands-list {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 100%; } }
   .assortment__brands-item-button {
     width: 140px;
     height: 50px;
@@ -356,10 +373,12 @@ body {
     align-items: center;
     justify-content: center;
     cursor: pointer; }
+    @media (max-width: 767px) {
+      .assortment__brands-item-button {
+        margin: 10px; } }
     .assortment__brands-item-button.active-tab {
       background: #8fb52c; }
   .assortment .all-brands {
-    width: 150px;
     line-height: 1.2;
     color: #77716a; }
     .assortment .all-brands span {
@@ -368,13 +387,30 @@ body {
     list-style: none;
     display: flex;
     flex-wrap: wrap; }
+    @media (max-width: 767px) {
+      .assortment__products-list {
+        justify-content: center; } }
 
 .product {
   width: calc((100% / 3) - (2 * 20px / 3));
+  max-width: 350px;
   margin-right: 20px;
   margin-bottom: 25px; }
-  .product:nth-child(3n) {
-    margin-right: 0; }
+  @media (min-width: 992px) {
+    .product:nth-child(3n) {
+      margin-right: 0; } }
+  @media (max-width: 991px) and (min-width: 768px) {
+    .product {
+      width: calc((100% / 2) - (20px / 2)); }
+      .product:nth-child(2n) {
+        margin-right: 0; } }
+  @media (max-width: 767px) {
+    .product {
+      width: 100%;
+      margin-bottom: 40px;
+      margin-right: 0; } }
+  .product > img {
+    width: 100%; }
   .product__category {
     font-size: 15px;
     margin-bottom: 5px; }
@@ -407,5 +443,8 @@ body {
   .product__description {
     font-size: 15px;
     line-height: 1.2; }
+    @media (max-width: 767px) {
+      .product__description {
+        font-size: 17px; } }
 
 /*# sourceMappingURL=style.css.map */
