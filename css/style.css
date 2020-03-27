@@ -447,4 +447,18 @@ body {
       .product__description {
         font-size: 17px; } }
 
+_:-ms-fullscreen,
+:root .assortment__products-list {
+  max-width: 1200px;
+  padding: 0 130px;
+  box-sizing: border-box; }
+
+@media (max-width: 991px) and (min-width: 768px) and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .assortment__products-list {
+    max-width: 991px !important; } }
+
+@media (max-width: 767px) and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .assortment__products-list {
+    max-width: 767px !important; } }
+
 /*# sourceMappingURL=style.css.map */
