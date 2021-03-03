@@ -5,7 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "normalize.css": "^8.0.1",
-    "pug": "^2.0.4"
+    "pug": "^3.0.1"
   },
   "devDependencies": {
     "gulp": "^4.0.2",
